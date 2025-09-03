@@ -1,4 +1,5 @@
-# ⚡ RepoSmith
+# ⚡ RepoSmith [![PyPI version](https://img.shields.io/pypi/v/reposmith-tol)](https://pypi.org/project/reposmith-tol/) [![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=for-the-badge)](https://github.com/sponsors/liebema)
+
 
 **RepoSmith** is a portable Python library & CLI tool that helps you **bootstrap new projects instantly**.  
 With one command, you get a ready-to-code environment including virtualenv, config files, VS Code setup, `.gitignore`, and license.
@@ -19,6 +20,7 @@ With one command, you get a ready-to-code environment including virtualenv, conf
   - `LICENSE` (MIT by default)
 - 🤖 Preconfigured **GitHub Actions workflow**  
 - 🛡️ Built-in license templates (MIT, Apache-2.0)  
+
 
 ---
 
@@ -125,3 +127,12 @@ install_requirements(venv_dir, req_file)
 ## 🛡️ License
 This project is licensed under the [MIT License](LICENSE).  
 © 2025 TamerOnLine
+
+---
+
+## 💖 Support this project
+
+If you find **RepoSmith** useful, consider supporting its development by becoming a sponsor.  
+Your support helps us maintain infrastructure and continue building open-source tools.
+
+👉 [Sponsor us on GitHub](https://github.com/sponsors/liebema)
