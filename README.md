@@ -20,7 +20,7 @@ With one command, you get a ready-to-code environment including virtualenv, conf
   - `.gitignore`
   - `LICENSE` (MIT by default)
 - 🤖 Preconfigured **GitHub Actions workflow**  
-- 🛡️ Built-in license templates (MIT, Apache-2.0)  
+- 🛡️ Built-in license templates (MIT)  
 
 
 ---
@@ -77,7 +77,7 @@ py -m reposmith.main --ci create --gitignore python --author "Tamer"
 --ci {skip|create|force}    Configure GitHub Actions workflow
 --ci-python VERSION         Python version for CI (default: 3.12)
 --gitignore {python|node|django}
---license {MIT|Apache-2.0}  License type (default: MIT)
+--license MIT  License type (only MIT supported for now)
 --author NAME               Author name for LICENSE
 --year YYYY                 Year in LICENSE header
 --root PATH                 Target project root (absolute/relative)
@@ -88,7 +88,7 @@ py -m reposmith.main --ci create --gitignore python --author "Tamer"
 ### Example
 ```bash
 cd MyNewProject
-reposmith --ci create --gitignore django --license Apache-2.0 --author "Tamer"
+reposmith --ci create --gitignore django --license MIT --author "Tamer"
 ```
 
 Generates:

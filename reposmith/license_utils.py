@@ -25,7 +25,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-def create_license(root_dir, author: str = "Your Name", year: int | None = None) -> None:
+def create_license(root_dir, license_type: str = "MIT", author: str = "Your Name", year: int | None = None) -> None:
 
     print("\n[10] Checking LICENSE")
     path = Path(root_dir) / "LICENSE"
