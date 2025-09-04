@@ -1,3 +1,4 @@
+# reposmith/license_utils.py
 from pathlib import Path
 from datetime import datetime
 
@@ -24,21 +25,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
+def create_license(root_dir, author: str = "Your Name", year: int | None = None) -> None:
 
-
-TEMPLATES = {
-    "MIT": MIT,
-}
-
-def create_license(root_dir, license_type: str = "MIT", author: str = "Your Name", year: int | None = None) -> None:
     print("\n[10] Checking LICENSE")
     path = Path(root_dir) / "LICENSE"
     if path.exists():
         print("LICENSE already exists.")
         return
-
-    tpl = TEMPLATES.get(license_type, MIT)
     year = year or datetime.now().year
-    content = tpl.format(year=year, author=author)
+    content = MIT.format(year=year, author=author)
     path.write_text(content, encoding="utf-8")
-    print(f"LICENSE created: {license_type} for {author} ({year})")
+    print(f"LICENSE created: MIT for {author} ({year})")
