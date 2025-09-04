@@ -5,6 +5,21 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.5] - 2025-09-04
+### Added
+- Support for direct `python -m reposmith` execution (module entry).
+- More informative console logs during initialization.
+
+### Changed
+- Improved `unittest` CI workflow to ensure consistent module discovery.
+- Small refinements in CLI argument parsing and help messages.
+
+### Fixed
+- Resolved `ModuleNotFoundError: No module named 'reposmith'` in GitHub Actions by adjusting import paths.
+- Minor fixes for editable installs on some environments.
+
+---
+
 ## [0.2.4] - 2025-09-04
 ### Changed
 - Updated `pyproject.toml` to version `0.2.4`.
