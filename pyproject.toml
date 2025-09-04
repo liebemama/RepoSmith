@@ -1,21 +1,25 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=77.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "reposmith-tol"
 version = "0.1.2"
 description = "Portable project bootstrapper (venv, gitignore, license, vscode, etc.)"
-readme = { file = "README.md", content-type = "text/markdown" }
+readme = "README.md"
 requires-python = ">=3.12"
 authors = [{ name = "TamerOnLine" }]
-license = "MIT"
-dependencies = []
 keywords = ["bootstrap", "venv", "gitignore", "license", "vscode", "scaffold", "cli"]
+dependencies = []
+
+# ترخيص وفق الصيغة الجديدة (بدلاً من tool.setuptools.license-files)
+license = { file = "LICENSE" }
+license-files = { paths = ["LICENSE"] }
 
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Intended Audience :: Developers",
   "Topic :: Software Development :: Build Tools",
@@ -27,12 +31,9 @@ Homepage = "https://github.com/liebemama/RepoSmith"
 Repository = "https://github.com/liebemama/RepoSmith"
 Issues = "https://github.com/liebemama/RepoSmith/issues"
 
-[tool.setuptools]
-license-files = ["LICENSE"]
+[project.scripts]
+reposmith = "reposmith.main:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["reposmith*"]
-
-[project.scripts]
-reposmith = "reposmith.main:main"
