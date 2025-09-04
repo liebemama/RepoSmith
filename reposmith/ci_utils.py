@@ -39,9 +39,18 @@ def ensure_github_actions_workflow(
             with:
               python-version: "{py}"
 
-          - name: Install minimal requirements (if any)
+          - name: Cache pip
+            uses: actions/cache@v4
+            with:
+              path: ~/.cache/pip
+              key: ${{{{ runner.os }}}}-pip-${{{{ hashFiles('**/requirements.txt') }}}}
+              restore-keys: |
+                ${{{{ runner.os }}}}-pip-
+
+          - name: Install requirements
             run: |
               python -m pip install --upgrade pip
+              if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
           - name: Run {program}
             run: |

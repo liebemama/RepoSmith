@@ -47,6 +47,10 @@ This will:
 
 ## 📦 Installation
 
+### From PyPI
+```bash
+pip install reposmith-tol
+
 ### From source (local dev)
 ```bash
 git clone https://github.com/TamerOnLine/RepoSmith.git
