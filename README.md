@@ -1,52 +1,47 @@
-# ⚡ RepoSmith 
-[![PyPI version](https://img.shields.io/pypi/v/reposmith-tol?style=flat-square)](https://pypi.org/project/reposmith-tol/)
-[![Python](https://img.shields.io/badge/python-3.12+-blue.svg?style=flat-square)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=flat-square)](https://github.com/sponsors/liebemama)
+# ⚡ RepoSmith  
 
-**RepoSmith** is a **lightweight & portable CLI tool** that helps you **bootstrap new Python projects instantly** 🚀.  
-With one command, you get a ready-to-code environment including virtualenv, config files, VS Code setup, `.gitignore`, and license.
+[![PyPI version](https://img.shields.io/pypi/v/reposmith-tol)](https://pypi.org/project/reposmith-tol/)  
+[![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)  
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)  
+[![CI](https://github.com/liebemama/RepoSmith/actions/workflows/test-main.yml/badge.svg)](https://github.com/liebemama/RepoSmith/actions)  
+[![Downloads](https://static.pepy.tech/personalized-badge/reposmith-tol?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads)](https://pepy.tech/project/reposmith-tol)  
+[![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=for-the-badge)](https://github.com/sponsors/liebema)  
+
+---
+
+**RepoSmith** is a **lightweight & portable Python CLI tool** that helps you **bootstrap new projects instantly** 🚀.  
+With a single command, you get a **ready-to-code environment** including:  
+
+- 🧩 Virtualenv (`.venv`)  
+- ⚙️ Config files  
+- 📦 `requirements.txt`  
+- 🖥️ VS Code setup (`.vscode/`)  
+- 📜 `.gitignore`  
+- 🛡️ License  
 
 ---
 
 ## ✨ Features
-- 🚀 Quick project setup with a single command
-- 🐍 Python ≥ 3.12 support
-- 📦 Automatic virtual environment creation (`.venv`)
-- 📂 Generates essential files:
-  - `setup-config.json`, `requirements.txt`, `app.py`
-  - `.vscode/` (settings + launch config)
-  - `.gitignore`, `LICENSE`
-- ⚙️ Preconfigured GitHub Actions workflow
-- 🛡️ Built-in MIT license template
-
----
-
-## ⚡ Quick Start
-```powershell
-cd MyProject
-py -m reposmith.main
-```
-
-This will:
-- create `.venv/`
-- add `requirements.txt`, `app.py`, `.gitignore`, `LICENSE`, `.vscode/`
-- configure everything automatically with defaults.
-
-👉 Optional flags:
-- `--ci create` → add GitHub Actions workflow
-- `--author "YourName"` → set your name in LICENSE
+- 🚀 **Quick bootstrap**: create a full project with one command.  
+- 🐍 **Python ≥ 3.12** support.  
+- 📦 **Automatic virtual environment creation**.  
+- 📂 **Essential files generated** out of the box:  
+  - `setup-config.json`, `requirements.txt`, `app.py`  
+  - `.vscode/` (settings + launch config)  
+  - `.gitignore`, `LICENSE`  
+- ⚙️ **Preconfigured GitHub Actions** workflow for CI.  
+- 🛡️ **MIT License** template built-in.  
 
 ---
 
 ## 📦 Installation
 
-### From PyPI
+From PyPI:
 ```bash
 pip install reposmith-tol
 ```
 
-### From Source
+From source:
 ```bash
 git clone https://github.com/liebemama/RepoSmith.git
 cd RepoSmith
@@ -55,11 +50,11 @@ pip install -e .
 
 ---
 
-## 🚀 Usage
+## ⚡ Usage
 
 ### CLI
 ```bash
-# Create new project structure in current folder
+# Create a new project structure in the current folder
 reposmith --ci create --gitignore python --author "Tamer"
 ```
 
@@ -67,6 +62,12 @@ reposmith --ci create --gitignore python --author "Tamer"
 ```bash
 cd MyNewProject
 reposmith --ci create --gitignore django --license MIT --author "Tamer"
+```
+
+### Quick Start (PowerShell)
+```powershell
+cd MyProject
+py -m reposmith.main
 ```
 
 ---
@@ -85,12 +86,54 @@ install_requirements(venv_dir, req_file)
 
 ---
 
-## 🛡️ License
-This project is licensed under the [MIT License](LICENSE).  
-© 2025 TamerOnLine
+## 📂 Project Structure
+
+```
+MyProject/
+├── app.py
+├── requirements.txt
+├── setup-config.json
+├── .gitignore
+├── .vscode/
+│   └── settings.json
+└── venv/
+```
 
 ---
 
-## 💖 Support this project
-If you find **RepoSmith** useful, consider supporting its development:  
-👉 [Sponsor us on GitHub](https://github.com/sponsors/liebemama)
+## 🧪 Development
+
+Clone the repo and install in editable mode:
+
+```bash
+git clone https://github.com/liebemama/RepoSmith.git
+cd RepoSmith
+pip install -e .
+```
+
+Run tests and CI locally (or via GitHub Actions).  
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions 🎉  
+- Open an **Issue** to discuss ideas.  
+- Submit a **Pull Request** to improve features.  
+- Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.  
+
+---
+
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE).  
+© 2025 TamerOnLine  
+
+---
+
+## 💖 Support & Sponsor
+
+If you find RepoSmith useful, please consider supporting its development:  
+👉 [GitHub Sponsors](https://github.com/sponsors/liebema)  
+
+---
