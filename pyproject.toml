@@ -11,8 +11,9 @@ requires-python = ">=3.12"
 authors = [{ name = "TamerOnLine" }]
 keywords = ["bootstrap", "venv", "gitignore", "license", "vscode", "scaffold", "cli"]
 
-license = "MIT"
+license = { file = "LICENSE" }
 license-files = ["LICENSE"]
+
 
 classifiers = [
   "Programming Language :: Python :: 3",
