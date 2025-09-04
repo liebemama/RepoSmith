@@ -56,6 +56,10 @@ def main():
         help="License type (MIT only)",
     )
 
+    parser.add_argument("--no-pip-upgrade", action="store_true",
+                    help="Skip upgrading pip inside the virtual environment")
+
+
     parser.add_argument("--author", default="Your Name", help="Author name for LICENSE")
     parser.add_argument("--year", type=int, help="Year for LICENSE header")
 
@@ -72,6 +76,8 @@ def main():
 
     if args.ci in ("create", "force"):
         program_to_run = config.get("entry_point") or config.get("main_file", "app.py")
+        picked = "entry_point" if config.get("entry_point") else "main_file"
+        print(f"[ci] Using {picked}: {program_to_run}")
         status = ensure_github_actions_workflow(
             root_dir,
             py=args.ci_python,
@@ -87,7 +93,12 @@ def main():
 
     create_virtualenv(venv_dir)
     create_requirements_file(requirements_path)
-    upgrade_pip(venv_dir)
+
+    if not args.no_pip_upgrade:
+        upgrade_pip(venv_dir)
+    else:
+        print("[5] Skipping pip upgrade (per --no-pip-upgrade)")
+
     install_requirements(venv_dir, requirements_path)
     create_env_info(venv_dir)
     create_app_file(main_file)
@@ -95,7 +106,15 @@ def main():
 
     # New: gitignore + license
     create_gitignore(root_dir, preset=args.gitignore)
-    create_license(root_dir, author=args.author, year=args.year)
+    create_license(root_dir, license_type=args.license_type, author=args.author, year=args.year)
+
+    print(f"\nSummary:\n"
+        f"- venv: {venv_dir}\n"
+        f"- requirements: {requirements_path}\n"
+        f"- main: {main_file}\n"
+        f"- gitignore preset: {args.gitignore}\n"
+        f"- license: {args.license_type}")
+
 
     print("\nProject setup complete.")
 
