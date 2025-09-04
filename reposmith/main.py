@@ -78,6 +78,10 @@ def main():
         program_to_run = config.get("entry_point") or config.get("main_file", "app.py")
         picked = "entry_point" if config.get("entry_point") else "main_file"
         print(f"[ci] Using {picked}: {program_to_run}")
+
+        if config.get("entry_point") and not (Path(root_dir) / config["entry_point"]).exists():
+            print(f"[ci] Warning: entry_point '{config['entry_point']}' not found on disk; CI may fall back.")
+
         status = ensure_github_actions_workflow(
             root_dir,
             py=args.ci_python,
