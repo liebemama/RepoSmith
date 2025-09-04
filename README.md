@@ -126,8 +126,11 @@ install_requirements(venv_dir, req_file)
 ---
 
 ## 🛡️ License
-This project is licensed under the [MIT License](LICENSE).  
+This project is licensed under the [MIT License](LICENSE).
 © 2025 TamerOnLine
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 ---
 
