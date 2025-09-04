@@ -28,7 +28,7 @@ Homepage = "https://github.com/liebemama/RepoSmith"
 Repository = "https://github.com/liebemama/RepoSmith"
 Issues = "https://github.com/liebemama/RepoSmith/issues"
 Sponsor = "https://github.com/sponsors/liebemama"
-Support = "mailto:info@tameronline.com"
+Support = "https://github.com/liebemama/RepoSmith/discussions"
 
 
 [project.scripts]
