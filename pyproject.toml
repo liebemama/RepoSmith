@@ -29,6 +29,8 @@ classifiers = [
 Homepage = "https://github.com/liebemama/RepoSmith"
 Repository = "https://github.com/liebemama/RepoSmith"
 Issues = "https://github.com/liebemama/RepoSmith/issues"
+License = "https://github.com/liebemama/RepoSmith/blob/main/LICENSE"
+
 
 [project.scripts]
 reposmith = "reposmith.main:main"
