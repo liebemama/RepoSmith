@@ -1,7 +1,16 @@
+# reposmith/ci_utils.py
 from pathlib import Path
 import textwrap
 
-def ensure_github_actions_workflow(root_dir: Path, path=".github/workflows/test-main.yml", *, py="3.12", force=False, backup=True) -> str:
+def ensure_github_actions_workflow(
+    root_dir: Path,
+    path: str = ".github/workflows/test-main.yml",
+    *,
+    py: str = "3.12",
+    program: str = "app.py",
+    force: bool = False,
+    backup: bool = True,
+) -> str:
     base = Path(root_dir)
     wf_path = base / path
     wf_path.parent.mkdir(parents=True, exist_ok=True)
@@ -14,7 +23,7 @@ def ensure_github_actions_workflow(root_dir: Path, path=".github/workflows/test-
         bak.write_text(wf_path.read_text(encoding="utf-8"), encoding="utf-8")
 
     yml = textwrap.dedent(f"""
-    name: Test main.py
+    name: Test {program}
 
     on: [push, pull_request]
 
@@ -34,9 +43,9 @@ def ensure_github_actions_workflow(root_dir: Path, path=".github/workflows/test-
             run: |
               python -m pip install --upgrade pip
 
-          - name: Run main.py
+          - name: Run {program}
             run: |
-              python main.py
+              python {program}
     """)
     wf_path.write_text(yml.strip() + "\n", encoding="utf-8")
     return "overwritten" if force else "created"

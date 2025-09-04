@@ -71,8 +71,15 @@ def main():
     config = load_or_create_config(root_dir)
 
     if args.ci in ("create", "force"):
-        status = ensure_github_actions_workflow(root_dir, py=args.ci_python, force=(args.ci == "force"))
+        program_to_run = config.get("entry_point") or config.get("main_file", "app.py")
+        status = ensure_github_actions_workflow(
+            root_dir,
+            py=args.ci_python,
+            program=program_to_run,
+            force=(args.ci == "force"),
+        )
         print(f"[ci] {status}: {root_dir / '.github' / 'workflows' / 'test-main.yml'}")
+
 
     venv_dir = (root_dir / config["venv_dir"]).as_posix()
     requirements_path = (root_dir / config["requirements_file"]).as_posix()
