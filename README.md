@@ -50,17 +50,18 @@ This will:
 ### From PyPI
 ```bash
 pip install reposmith-tol
+```
 
 ### From source (local dev)
 ```bash
-git clone https://github.com/TamerOnLine/RepoSmith.git
+git clone https://github.com/liebemama/RepoSmith.git
 cd RepoSmith
 pip install -e .
 ```
 
 ### From GitHub (direct)
 ```bash
-pip install "git+https://github.com/TamerOnLine/RepoSmith.git@main"
+pip install "git+https://github.com/liebemama/RepoSmith.git@main"
 ```
 
 ---

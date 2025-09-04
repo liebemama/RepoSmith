@@ -30,7 +30,7 @@ except ImportError:
 
 def resolve_root(args) -> Path:
     if args.root:
-        return Path(args.root).resolve()     # <-- الآن يفسر . بالنسبة لـ CWD
+        return Path(args.root).resolve()   
     if args.up is not None:
         root = Path(os.getcwd())
         for _ in range(args.up):
@@ -91,7 +91,7 @@ def main():
     install_requirements(venv_dir, requirements_path)
     create_env_info(venv_dir)
     create_app_file(main_file)
-    create_vscode_files(root_dir, venv_dir)
+    create_vscode_files(root_dir, venv_dir, main_file=main_file)
 
     # New: gitignore + license
     create_gitignore(root_dir, preset=args.gitignore)

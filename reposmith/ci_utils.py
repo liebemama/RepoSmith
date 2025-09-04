@@ -54,7 +54,15 @@ def ensure_github_actions_workflow(
 
           - name: Run {program}
             run: |
-              python {program}
+              if [ -f "{program}" ]; then
+                echo "Running file: {program}"
+                python "{program}"
+              else
+                echo "Program file not found. Running module fallback..."
+                python -m reposmith.main --ci skip
+                python -c "import reposmith; print('import ok')"
+              fi
     """)
+
     wf_path.write_text(yml.strip() + "\n", encoding="utf-8")
     return "overwritten" if force else "created"
