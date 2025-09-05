@@ -1,0 +1,23 @@
+name: 💡 Idea
+description: Share a new idea or improvement
+title: "Idea: "
+labels: [idea]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: صف فكرتك بإيجاز
+      placeholder: "الفكرة هي ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: ما الفائدة المتوقعة من الفكرة؟
+      placeholder: |
+        - تحسين ...
+        - تقليل ...
+        - إضافة ...

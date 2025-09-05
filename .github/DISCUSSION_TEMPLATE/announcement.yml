@@ -1,0 +1,17 @@
+name: 📣 Announcement
+description: Share an update or announcement
+title: "Announcement: "
+labels: [announcement]
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: اكتب الإعلان أو الخبر هنا
+      placeholder: |
+        مثال:
+        - إصدار جديد 0.x
+        - حدث أو Meetup
+        - تغيير مهم في المشروع
+    validations:
+      required: true
