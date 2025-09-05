@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/<ORG>/<REPO>/discussions
+    about: Use Discussions for general conversations and ideas.
