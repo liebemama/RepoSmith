@@ -8,8 +8,6 @@ We actively support and provide security updates for the following versions of *
 | Latest (main) | ✅ Full support    |
 | Older         | ⚠️ Best-effort only |
 
-If you are running an outdated version, we strongly recommend upgrading to the latest release.
-
 ---
 
 ## Reporting a Vulnerability
@@ -32,6 +30,17 @@ When reporting, please include:
 2. A maintainer will investigate and confirm the issue.  
 3. If confirmed, we will work on a fix and prepare a security release.  
 4. You will be notified once the fix is published.  
+
+---
+
+## Dependencies & Automated Scanning
+To keep **RepoSmith** secure, we rely on GitHub’s built-in security tooling:
+
+- 🛠 **Dependabot Alerts** → Automatically notifies us about vulnerable dependencies.  
+- 🔍 **Code Scanning (CodeQL)** → Detects potential vulnerabilities and coding errors.  
+- 🕵️ **Secret Scanning** → Prevents accidental leaks of tokens, keys, or credentials.  
+
+We review alerts regularly and patch vulnerabilities as soon as possible.  
 
 ---
 
