@@ -7,8 +7,8 @@ body:
     id: topic
     attributes:
       label: Topic
-      description: ما موضوع النقاش؟
-      placeholder: "الموضوع هو ..."
+      description: What is the discussion about?
+      placeholder: "The topic is ..."
     validations:
       required: true
 
@@ -16,8 +16,8 @@ body:
     id: details
     attributes:
       label: Details
-      description: أعط تفاصيل أو خلفية للنقاش
+      description: Provide background or more information for the discussion
       placeholder: |
-        - لماذا هذا مهم؟
-        - ما الذي تود مناقشته؟
-        - اقتراحات أو ملاحظات
+        - Why is this important?
+        - What would you like to discuss?
+        - Suggestions or feedback

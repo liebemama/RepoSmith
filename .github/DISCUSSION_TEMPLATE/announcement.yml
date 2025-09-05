@@ -7,11 +7,11 @@ body:
     id: details
     attributes:
       label: Details
-      description: اكتب الإعلان أو الخبر هنا
+      description: Write the announcement or news here
       placeholder: |
-        مثال:
-        - إصدار جديد 0.x
-        - حدث أو Meetup
-        - تغيير مهم في المشروع
+        Example:
+        - New release 0.x
+        - Event or Meetup
+        - Important project change
     validations:
       required: true

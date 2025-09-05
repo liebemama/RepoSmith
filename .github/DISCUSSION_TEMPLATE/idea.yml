@@ -7,8 +7,8 @@ body:
     id: summary
     attributes:
       label: Summary
-      description: صف فكرتك بإيجاز
-      placeholder: "الفكرة هي ..."
+      description: Briefly describe your idea
+      placeholder: "The idea is ..."
     validations:
       required: true
 
@@ -16,8 +16,8 @@ body:
     id: benefits
     attributes:
       label: Benefits
-      description: ما الفائدة المتوقعة من الفكرة؟
+      description: What are the expected benefits of this idea?
       placeholder: |
-        - تحسين ...
-        - تقليل ...
-        - إضافة ...
+        - Improve ...
+        - Reduce ...
+        - Add ...
