@@ -21,16 +21,18 @@ jobs:
   analyze:
     name: CodeQL (Python)
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # Initialize CodeQL
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: python
-          # queries: security-extended,security-and-quality  # Enable for broader checks
+          # Broader checks (recommended)
+          queries: security-extended,security-and-quality
+          # Optional: use a custom config file
+          # config-file: ./.codeql/config.yml
 
       # Optional: Install dependencies so CodeQL understands imports
       # - run: |
