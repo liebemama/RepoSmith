@@ -5,6 +5,19 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.7] - 2025-09-05
+### Changed
+- Bump project version to `0.2.7` in `pyproject.toml`.
+- Keep advanced matrix CI in `.github/workflows/ci.yml`; make generator output to `unit-tests.yml` to avoid conflicts.
+
+### Added
+- Example projects under `examples/hello_world` and `examples/flask_app`.
+
+### Fixed
+- Classifiers now include Python 3.13.
+
+---
+
 ## [0.2.6] - 2025-09-05
 ### Added
 - Auto-generate `setup-config.json` with sane defaults via `load_or_create_config` + unit tests.  
