@@ -4,25 +4,22 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.13"
 
-      - name: Install (dev only)
+      - name: Install dependencies (if any)
         run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
 
       - name: Run unit tests
         run: |
-          #
+          # Ensure CI uses local repo code for imports and subprocesses
           export PYTHONPATH="$GITHUB_WORKSPACE:$PYTHONPATH"
-          #
+          # (Optional) remove any installed package that might shadow local code
           pip uninstall -y reposmith-tol || true
-          if [ -d tests ]; then
-            python -m unittest discover -s tests -v
-          else
-            echo "No tests directory found. Skipping."
-          fi
+          python -m unittest discover -s tests -v

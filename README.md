@@ -1,10 +1,11 @@
 # ⚡ RepoSmith 
 
 [![PyPI version](https://img.shields.io/pypi/v/reposmith-tol?style=flat-square)](https://pypi.org/project/reposmith-tol/)
-[![Python](https://img.shields.io/badge/python-3.12+-blue.svg?style=flat-square)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://github.com/liebemama/RepoSmith/blob/main/LICENSE)
-![Run tests](https://github.com/TamerOnLine/RepoSmith/actions/workflows/test-main.yml/badge.svg?branch=main)
-[![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=flat-square)](https://github.com/sponsors/liebemama)
+![Python](https://img.shields.io/pypi/pyversions/reposmith-tol?style=flat-square)
+![License](https://img.shields.io/github/license/TamerOnLine/RepoSmith?style=flat-square)
+[![CI](https://github.com/TamerOnLine/RepoSmith/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/TamerOnLine/RepoSmith/actions/workflows/ci.yml)
+[![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=flat-square)](https://github.com/sponsors/TamerOnLine)
+
 
 
 **RepoSmith** is a **portable Python project bootstrapper** — a zero-dependency CLI & library that helps you spin up new projects instantly.  
@@ -88,6 +89,16 @@ python -m unittest discover -s tests -v
 ```
 
 ---
+
+## 🗺️ Roadmap
+
+
+
+🔗 [Follow the project progress on GitHub Projects](https://github.com/orgs/liebemama/projects/2)
+
+
+---
+
 
 ## 🛡 License
 This project is licensed under the [MIT License](https://github.com/liebemama/RepoSmith/blob/main/LICENSE).  
