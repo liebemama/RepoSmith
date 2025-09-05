@@ -1,18 +1,19 @@
 version: 2
 updates:
-  # Monitor GitHub Actions updates (important for all projects)
+  # Monitor GitHub Actions updates
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"   # Check once per week
+      interval: "weekly"
     open-pull-requests-limit: 5
+    reviewers:
+      - "TamerOnLine"
 
-  # Prepare Python dependencies monitoring (even if you don’t have them yet)
+  # Monitor Python dependencies
   - package-ecosystem: "pip"
-    directory: "/"         # Will read requirements.txt or pyproject.toml when you add them
+    directory: "/"
     schedule:
       interval: "weekly"
-    # Example of useful options:
-    # ignore:
-    #   - dependency-name: "pytest"
-    #     versions: [">=9.0.0"]
+    open-pull-requests-limit: 5
+    reviewers:
+      - "TamerOnLine"
