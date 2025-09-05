@@ -4,6 +4,7 @@
 ![Python](https://img.shields.io/pypi/pyversions/reposmith-tol?style=flat-square)
 ![License](https://img.shields.io/github/license/liebemama/RepoSmith?style=flat-square)
 ![CI Success](https://img.shields.io/github/actions/workflow/status/liebemama/RepoSmith/ci.yml?branch=main&label=CI%20Success&style=flat-square&logo=github)
+![Security Advisories](https://img.shields.io/badge/Advisories-Active-blue?style=flat-square&logo=github)
 [![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=flat-square)](https://github.com/sponsors/liebemama)
 
 
