@@ -14,7 +14,7 @@ We actively support and provide security updates for the following versions of *
 If you discover a security vulnerability in **RepoSmith**, please **do not open a public issue**.  
 Instead, report it through one of the following channels:
 
-- 📧 **Email:** [info@tameronline.com](mailto:security@tameronline.com)  
+- 📧 **Email:** [info@tameronline.com](mailto:info@tameronline.com)  
 - 🔗 **Private GitHub advisory:** [Report via GitHub](https://github.com/liebemama/RepoSmith/security/advisories/new)
 
 When reporting, please include:
