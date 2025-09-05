@@ -118,6 +118,6 @@ This project is licensed under the [MIT License](https://github.com/liebemama/Re
 - 💖 **Sponsor:** [GitHub Sponsors](https://github.com/sponsors/liebemama)  
 - 📧 **Contact:** [info@tameronline.com](mailto:info@tameronline.com)
 
-
+---
 
 
