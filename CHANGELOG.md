@@ -12,7 +12,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ### Changed
 - CI workflow generator now ensures CI imports local repo code and uninstalls any shadowing installed package.
-- Updated matrix CI (`\.github/workflows/test-main.yml`) to test on 3.12/3.13 across OSes and build/upload artifacts.
+- Updated matrix CI (`\.github/workflows/ci.yml`) to test on 3.12/3.13 across OSes and build/upload artifacts.
 - VS Code integration: more robust interpreter fallback when `.venv` is missing.
 
 ### Fixed
@@ -119,4 +119,6 @@ This project follows [Semantic Versioning](https://semver.org/).
   - `.vscode/` (settings + launch)
   - `.gitignore`, `LICENSE`
 - Basic GitHub Actions workflow generator.
+
+
 
