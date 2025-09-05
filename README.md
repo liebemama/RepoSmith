@@ -108,8 +108,8 @@ This project is licensed under the [MIT License](https://github.com/liebemama/Re
 
 ## 💬 Support
 
-- 🐞 **Bug Report:** [Open Bug Report](https://github.com/liebemama/RepoSmith/issues/new?assignees=&labels=bug&template=bug_report.yml)  
-- 💡 **Feature Request:** [Suggest a Feature](https://github.com/liebemama/RepoSmith/issues/new?assignees=&labels=feature&template=feature_request.yml)  
+- 🐞 **Bug Report:** [Open Bug Report](https://github.com/liebemama/RepoSmith/issues/new?template=bug.yml)  
+- 💡 **Feature Request:** [Suggest a Feature](https://github.com/liebemama/RepoSmith/issues/new?template=feature.yml)  
 - ✅ **Task / ToDo:** [Create Task](https://github.com/liebemama/RepoSmith/issues/new?assignees=&labels=task&template=task.yml)  
 - 📄 **Blank Issue:** [Open Blank Issue](https://github.com/liebemama/RepoSmith/issues/new)  
 - 📂 **All Issues:** [GitHub Issues](https://github.com/liebemama/RepoSmith/issues)  
