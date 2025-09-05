@@ -16,7 +16,7 @@ If you are running an outdated version, we strongly recommend upgrading to the l
 If you discover a security vulnerability in **RepoSmith**, please **do not open a public issue**.  
 Instead, report it through one of the following channels:
 
-- 📧 **Email:** [security@tameronline.com](mailto:security@tameronline.com)  
+- 📧 **Email:** [info@tameronline.com](mailto:security@tameronline.com)  
 - 🔗 **Private GitHub advisory:** [Report via GitHub](https://github.com/liebemama/RepoSmith/security/advisories/new)
 
 When reporting, please include:
