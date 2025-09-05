@@ -5,6 +5,21 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.6] - 2025-09-05
+### Added
+- Auto-generate `setup-config.json` with sane defaults via `load_or_create_config` + unit tests.  
+- Additional smoke tests to run `python -m reposmith.main` with explicit `PYTHONPATH` to prefer local code.
+
+### Changed
+- CI workflow generator now ensures CI imports local repo code and uninstalls any shadowing installed package.
+- Updated matrix CI (`.github/workflows/ci.yml`) to test on 3.12/3.13 across OSes and build/upload artifacts.
+- VS Code integration: more robust interpreter fallback when `.venv` is missing.
+
+### Fixed
+- Minor CLI/logging refinements and safer idempotent file writes across helpers.
+
+---
+
 ## [0.2.5] - 2025-09-04
 ### Added
 - Support for direct `python -m reposmith` execution (module entry).
