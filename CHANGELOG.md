@@ -5,6 +5,18 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.8] - 2025-09-06
+### Changed
+- Bump project version to `0.2.8` in `pyproject.toml`.
+
+### Added
+- No new features were introduced in this release.
+
+### Fixed
+- No bug fixes were introduced in this release.
+
+---
+
 ## [0.2.7] - 2025-09-05
 ### Changed
 - Bump project version to `0.2.7` in `pyproject.toml`.
