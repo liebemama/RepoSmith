@@ -50,7 +50,7 @@ jobs:
           cat RELEASE_NOTES.md || true
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@<SHA> # pinned (was v2)
         with:
           tag_name: ${{ steps.v.outputs.tag }}
           name: RepoSmith v${{ steps.v.outputs.version }}
