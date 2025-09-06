@@ -32,7 +32,7 @@ With one command, you get a ready-to-code environment: virtualenv, config files,
 ### Option 1 — run via Python module (always works)
 ```powershell
 cd MyProject
-py -m reposmith.main init --entry run.py --with-vscode --with-ci
+py -m reposmith init --entry run.py --with-vscode --with-ci
 ```
 
 ### Option 2 — run via CLI (if Scripts folder is on PATH)
@@ -46,6 +46,11 @@ Both commands will:
 - configure everything automatically with defaults
 
 ---
+
+
+> ℹ️ **Note:** For compatibility with older versions, you can still run  
+> `py -m reposmith.main ...` but it is recommended to use  
+> `py -m reposmith ...` going forward.
 
 ## 🚀 Usage
 
@@ -78,7 +83,7 @@ py -m pip install --upgrade reposmith-tol
 
 If PATH not configured, use:
 ```powershell
-py -m reposmith.main init --entry run.py
+py -m reposmith init --entry run.py
 ```
 
 ---
