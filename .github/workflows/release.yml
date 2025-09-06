@@ -38,6 +38,7 @@ jobs:
         shell: bash
         run: |
           ver="${{ steps.v.outputs.version }}"
+          # Extract lines from the version header until the next version header
           awk -v ver="$ver" '
             $0 ~ "^## \\["ver"\\]" {flag=1; next}
             $0 ~ "^## \\[" && flag {flag=0}
@@ -49,6 +50,7 @@ jobs:
           echo "bytes=$bytes" >> $GITHUB_OUTPUT
           echo "----- RELEASE NOTES -----"
           cat RELEASE_NOTES.md || true
+
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
