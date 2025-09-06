@@ -5,6 +5,14 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.9] - 2025-09-07
+### Added
+- New `__main__.py` entry point inside `reposmith/` package to support:
+  ```powershell
+  py -m reposmith --help
+
+---
+
 ## [0.2.8] - 2025-09-06
 ### Changed
 - Bump project version to `0.2.8` in `pyproject.toml`.
