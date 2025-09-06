@@ -2,9 +2,20 @@ name: CI
 
 on:
   push:
+    branches: [ "main" ]
+    paths-ignore:
+      - "*.md"
+      - "docs/**"
+      - ".github/ISSUE_TEMPLATE/**"
   pull_request:
+    branches: [ "main" ]
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths-ignore:
+      - "*.md"
+      - "docs/**"
+      - ".github/ISSUE_TEMPLATE/**"
+  workflow_dispatch:
 
-# Minimal token privileges for the whole workflow
 permissions:
   contents: read
 
@@ -20,7 +31,6 @@ jobs:
   test:
     name: Python ${{ matrix.python-version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    # (Optional) repeat minimal perms at job-level to satisfy strict linters
     permissions:
       contents: read
     strategy:
@@ -32,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          persist-credentials: false  # don't keep GITHUB_TOKEN in git remotes
+          persist-credentials: false  # لا تُبقِ GITHUB_TOKEN في remote
 
       - uses: actions/setup-python@v6
         with:
