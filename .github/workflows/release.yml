@@ -44,7 +44,7 @@ jobs:
             flag && $0 ~ "^## \\[" {flag=0}
             flag {print}
           ' CHANGELOG.md > RELEASE_NOTES.md
-          bytes=$(wc -c < RELEASE_NOTES.md | tr -d ' ')
+          bytes=$(wc -c < RELEASE_NOTES.md | tr -d " ")
           echo "bytes=$bytes" >> $GITHUB_OUTPUT
           echo "----- RELEASE NOTES -----"
           cat RELEASE_NOTES.md || true
