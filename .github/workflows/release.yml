@@ -3,11 +3,12 @@ name: Release from tag
 on:
   push:
     tags:
-      - 'v*'
-  workflow_dispatch:
+      - 'v*'          # Runs automatically when pushing any tag like v0.2.7
+  workflow_dispatch:   # Allows manual run
 
 permissions:
-  contents: write
+  contents: write      # Required to create a Release
+
 
 jobs:
   make-release:
