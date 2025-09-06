@@ -93,7 +93,10 @@ python -m unittest discover -s tests -v
 
 ## 🗺️ Roadmap
 
-
+- Support additional templates (Django, FastAPI, React)
+- Interactive wizard (`reposmith init --interactive`)
+- More license options (Apache-2.0, GPL-3.0)
+- Release workflow via GitHub Releases
 
 🔗 [Follow the project progress on GitHub Projects](https://github.com/orgs/liebemama/projects/2)
 

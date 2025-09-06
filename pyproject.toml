@@ -19,11 +19,13 @@ license-files = ["LICENSE"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Operating System :: OS Independent",
   "Intended Audience :: Developers",
   "Topic :: Software Development :: Build Tools",
   "Topic :: Utilities",
 ]
+
 
 [project.urls]
 Homepage = "https://github.com/liebemama/RepoSmith"
