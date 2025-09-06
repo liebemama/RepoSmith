@@ -62,8 +62,6 @@ jobs:
           cat RELEASE_NOTES.md || true
 
       - name: Create GitHub Release
-        # Tip: for maximum supply-chain security you can pin to a commit SHA.
-        # uses: softprops/action-gh-release@<commit-sha>
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.v.outputs.tag }}
