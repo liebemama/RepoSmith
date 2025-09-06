@@ -40,22 +40,22 @@ jobs:
           ver="${{ steps.v.outputs.version }}"
 
           # Extract lines from the [ver] header until the next version header.
-          # Also strip CRLF endings if the file was edited on Windows.
+          # Normalize CRLF->LF to avoid matching issues on Windows-edited files.
           awk -v ver="$ver" '
             { sub(/\r$/, "", $0) }                       # normalize CRLF -> LF
-            $0 ~ "^## \\[" ver "\\]" {flag=1; next}      # start section
-            flag && $0 ~ "^## \\[" {flag=0}              # stop at next section
+            $0 ~ "^## \\[" ver "\\]" {flag=1; next}      # start at "## [ver]"
+            flag && $0 ~ "^## \\[" {flag=0}              # stop at next "## ["
             flag {print}
           ' CHANGELOG.md > RELEASE_NOTES.md
 
-          # Fail early if release notes are empty
+          # Fail if release notes are empty
           if [ ! -s RELEASE_NOTES.md ]; then
             echo "❌ RELEASE_NOTES.md is empty for version [$ver]."
             echo "   Make sure CHANGELOG.md has a section: ## [$ver]"
             exit 1
           fi
 
-          # Calculate release notes size (diagnostics)
+          # Diagnostics
           bytes=$(wc -c < RELEASE_NOTES.md | tr -d ' ')
           echo "bytes=$bytes" >> $GITHUB_OUTPUT
           echo "----- RELEASE NOTES -----"
