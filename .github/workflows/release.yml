@@ -38,20 +38,32 @@ jobs:
         shell: bash
         run: |
           ver="${{ steps.v.outputs.version }}"
-          # Extract lines from the version header until the next version header
+
+          # Extract lines from the [ver] header until the next version header.
+          # Also strip CRLF endings if the file was edited on Windows.
           awk -v ver="$ver" '
-            $0 ~ "^## \\["ver"\\]" {flag=1; next}
-            $0 ~ "^## \\[" && flag {flag=0}
+            { sub(/\r$/, "", $0) }                       # normalize CRLF -> LF
+            $0 ~ "^## \\[" ver "\\]" {flag=1; next}      # start section
+            flag && $0 ~ "^## \\[" {flag=0}              # stop at next section
             flag {print}
           ' CHANGELOG.md > RELEASE_NOTES.md
 
-          # Calculate release notes file size (for diagnostics only)
+          # Fail early if release notes are empty
+          if [ ! -s RELEASE_NOTES.md ]; then
+            echo "❌ RELEASE_NOTES.md is empty for version [$ver]."
+            echo "   Make sure CHANGELOG.md has a section: ## [$ver]"
+            exit 1
+          fi
+
+          # Calculate release notes size (diagnostics)
           bytes=$(wc -c < RELEASE_NOTES.md | tr -d ' ')
           echo "bytes=$bytes" >> $GITHUB_OUTPUT
           echo "----- RELEASE NOTES -----"
           cat RELEASE_NOTES.md || true
 
       - name: Create GitHub Release
+        # Tip: for maximum supply-chain security you can pin to a commit SHA.
+        # uses: softprops/action-gh-release@<commit-sha>
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.v.outputs.tag }}
