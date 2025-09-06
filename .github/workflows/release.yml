@@ -3,11 +3,11 @@ name: Release from tag
 on:
   push:
     tags:
-      - 'v*'          # Runs automatically when pushing any tag like v0.2.7
-  workflow_dispatch:   # Allows manual run
+      - 'v*'
+  workflow_dispatch:
 
 permissions:
-  contents: write      # Required to create a Release
+  contents: write
 
 jobs:
   make-release:
@@ -38,19 +38,20 @@ jobs:
         shell: bash
         run: |
           ver="${{ steps.v.outputs.version }}"
-          # Extract lines from the version header until the next version header
           awk -v ver="$ver" '
             $0 ~ "^## \\["ver"\\]" {flag=1; next}
-            flag && $0 ~ "^## \\[" {flag=0}
+            $0 ~ "^## \\[" && flag {flag=0}
             flag {print}
           ' CHANGELOG.md > RELEASE_NOTES.md
-          bytes=$(wc -c < RELEASE_NOTES.md | tr -d " ")
+
+          # Calculate release notes file size (for diagnostics only)
+          bytes=$(wc -c < RELEASE_NOTES.md | tr -d ' ')
           echo "bytes=$bytes" >> $GITHUB_OUTPUT
           echo "----- RELEASE NOTES -----"
           cat RELEASE_NOTES.md || true
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8 # pinned (was v2)
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.v.outputs.tag }}
           name: RepoSmith v${{ steps.v.outputs.version }}
