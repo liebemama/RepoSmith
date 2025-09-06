@@ -8,6 +8,11 @@ updates:
     open-pull-requests-limit: 5
     reviewers:
       - "TamerOnLine"
+    labels:
+      - "dependencies"
+      - "ci"
+    assignees:
+      - "TamerOnLine"
 
   # Monitor Python dependencies
   - package-ecosystem: "pip"
@@ -16,4 +21,9 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 5
     reviewers:
+      - "TamerOnLine"
+    labels:
+      - "dependencies"
+      - "python"
+    assignees:
       - "TamerOnLine"
