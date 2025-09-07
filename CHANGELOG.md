@@ -160,6 +160,3 @@ This project follows [Semantic Versioning](https://semver.org/).
   - `.vscode/` (settings + launch)
   - `.gitignore`, `LICENSE`
 - Basic GitHub Actions workflow generator.
-
-
-
