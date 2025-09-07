@@ -7,7 +7,8 @@
 ![Security Advisories](https://img.shields.io/badge/Advisories-Active-blue?style=flat-square&logo=github)
 [![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=flat-square)](https://github.com/sponsors/liebemama)
 
-
+📘 Docs badge: ![Docs](https://img.shields.io/badge/docs-liebemama.github.io%2FRepoSmith-blue?style=flat-square)
+![Downloads](https://img.shields.io/pypi/dm/reposmith-tol?style=flat-square)
 
 **RepoSmith** is a **portable Python project bootstrapper** — a zero-dependency CLI & library that helps you spin up new projects instantly.  
 With one command, you get a ready-to-code environment: virtualenv, config files, VS Code setup, `.gitignore`, LICENSE, and optional CI.
@@ -82,10 +83,15 @@ For convenience, RepoSmith also ships with an **`on/` package** in the repo root
 This lets you launch the tool with a shorter command:
 
 ```powershell
+py -m on init        # same as: py -m reposmith init
+py -m on info        # show quick environment info
+py -m on init -i     # run in interactive mode (asks step-by-step questions)
+```
+> ℹ️ Note: Running `py -m on` without a subcommand will display the help message.
+=======
 cd MyProject
 py -m on init
 ```
-
 ---
 
 ## 📦 Installation
@@ -138,6 +144,5 @@ This project is licensed under the [MIT License](https://github.com/liebemama/Re
 - 💖 **Sponsor:** [GitHub Sponsors](https://github.com/sponsors/liebemama)  
 - 📧 **Contact:** [info@tameronline.com](mailto:info@tameronline.com)
 
----
 
 

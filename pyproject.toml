@@ -11,10 +11,9 @@ requires-python = ">=3.12"
 authors = [{ name = "TamerOnLine" }]
 keywords = ["bootstrap", "venv", "gitignore", "license", "vscode", "scaffold", "cli"]
 
-license = "MIT"
-license-files = ["LICENSE"]
-
-
+# PEP 639-compliant
+license = "MIT"                 
+license-files = ["LICENSE"]         
 
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -26,14 +25,13 @@ classifiers = [
   "Topic :: Utilities",
 ]
 
-
 [project.urls]
 Homepage = "https://github.com/liebemama/RepoSmith"
 Repository = "https://github.com/liebemama/RepoSmith"
 Issues = "https://github.com/liebemama/RepoSmith/issues"
 Sponsor = "https://github.com/sponsors/liebemama"
+Documentation = "https://liebemama.github.io/RepoSmith/"
 Support = "https://github.com/liebemama/RepoSmith/discussions"
-
 
 [project.scripts]
 reposmith = "reposmith.main:main"
