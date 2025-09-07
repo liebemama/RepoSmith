@@ -87,7 +87,10 @@ py -m on info        # show quick environment info
 py -m on init -i     # run in interactive mode (asks step-by-step questions)
 ```
 > ℹ️ Note: Running `py -m on` without a subcommand will display the help message.
-
+=======
+cd MyProject
+py -m on init
+```
 ---
 
 ## 📦 Installation
@@ -140,6 +143,5 @@ This project is licensed under the [MIT License](https://github.com/liebemama/Re
 - 💖 **Sponsor:** [GitHub Sponsors](https://github.com/sponsors/liebemama)  
 - 📧 **Contact:** [info@tameronline.com](mailto:info@tameronline.com)
 
----
 
 
