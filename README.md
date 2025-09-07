@@ -82,8 +82,9 @@ For convenience, RepoSmith also ships with an **`on/` package** in the repo root
 This lets you launch the tool with a shorter command:
 
 ```powershell
-cd MyProject
-py -m on init
+py -m on init        # same as: py -m reposmith init
+py -m on info        # show quick environment info
+py -m on init -i     # run in interactive mode (asks step-by-step questions)
 ```
 
 ---
