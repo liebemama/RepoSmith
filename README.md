@@ -76,6 +76,18 @@ Flags:
 
 ---
 
+### Option 3 — run via `on` helper (shortcut)
+
+For convenience, RepoSmith also ships with an **`on/` package** in the repo root.  
+This lets you launch the tool with a shorter command:
+
+```powershell
+cd MyProject
+py -m on init
+```
+
+---
+
 ## 📦 Installation
 ```powershell
 py -m pip install --upgrade reposmith-tol

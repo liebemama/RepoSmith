@@ -5,6 +5,14 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.2.10] - 2025-09-07
+### Added
+- New `on/` helper package in repo root to allow shorter execution:
+  ```powershell
+  py -m on init
+
+---
+
 ## [0.2.9] - 2025-09-07
 ### Added
 - New `__main__.py` entry point inside `reposmith/` package to support:
@@ -152,6 +160,3 @@ This project follows [Semantic Versioning](https://semver.org/).
   - `.vscode/` (settings + launch)
   - `.gitignore`, `LICENSE`
 - Basic GitHub Actions workflow generator.
-
-
-
