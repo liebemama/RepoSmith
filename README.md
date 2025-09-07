@@ -7,7 +7,8 @@
 ![Security Advisories](https://img.shields.io/badge/Advisories-Active-blue?style=flat-square&logo=github)
 [![Sponsor](https://img.shields.io/badge/Sponsor-💖-pink?style=flat-square)](https://github.com/sponsors/liebemama)
 
-📚 Full docs: https://liebemama.github.io/RepoSmith/  (always up to date)
+📘 Docs badge: ![Docs](https://img.shields.io/badge/docs-liebemama.github.io%2FRepoSmith-blue?style=flat-square)
+![Downloads](https://img.shields.io/pypi/dm/reposmith-tol?style=flat-square)
 
 **RepoSmith** is a **portable Python project bootstrapper** — a zero-dependency CLI & library that helps you spin up new projects instantly.  
 With one command, you get a ready-to-code environment: virtualenv, config files, VS Code setup, `.gitignore`, LICENSE, and optional CI.
