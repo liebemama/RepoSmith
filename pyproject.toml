@@ -40,4 +40,4 @@ reposmith = "reposmith.main:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["reposmith*"]
+include = ["reposmith*", "on"]
